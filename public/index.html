@@ -1,118 +1,138 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Bem-vindo à API</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background-color: #f0f2f5;
-      color: #333;
-    }
+	<meta charset="UTF-8">
+	<title>Bem-vindo à API</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			margin: 0;
+			background-color: #f0f2f5;
+			color: #333;
+		}
 
-    header {
-      background-color: #1e90ff;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
+		header {
+			background-color: #1e90ff;
+			color: white;
+			padding: 2rem 1rem;
+			text-align: center;
+		}
 
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
+		header h1 {
+			margin: 0;
+			font-size: 2rem;
+		}
 
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem;
-    }
+		main {
+			max-width: 800px;
+			margin: 2rem auto;
+			padding: 1rem;
+		}
 
-    section {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      margin-bottom: 2rem;
-    }
+		section {
+			background: white;
+			padding: 1.5rem;
+			border-radius: 10px;
+			box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+			margin-bottom: 2rem;
+		}
 
-    h2 {
-      color: #1e90ff;
-      margin-top: 0;
-    }
+		h2 {
+			color: #1e90ff;
+			margin-top: 0;
+		}
 
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
+		ul {
+			list-style: none;
+			padding-left: 0;
+		}
 
-    li {
-      margin-bottom: 0.75rem;
-      padding: 0.5rem;
-      background-color: #f9f9f9;
-      border-left: 4px solid #1e90ff;
-      border-radius: 4px;
-    }
+		li {
+			margin-bottom: 0.75rem;
+			padding: 0.5rem;
+			background-color: #f9f9f9;
+			border-left: 4px solid #1e90ff;
+			border-radius: 4px;
+		}
 
-    strong {
-      display: inline-block;
-      min-width: 60px;
-      color: #e67e22;
-    }
+		strong {
+			display: inline-block;
+			min-width: 60px;
+			color: #e67e22;
+		}
 
-    code {
-      background-color: #eef1f4;
-      padding: 4px 6px;
-      border-radius: 4px;
-      font-family: Consolas, monospace;
-      font-size: 90%;
-    }
+		code {
+			background-color: #eef1f4;
+			padding: 6px 10px;
+			border-radius: 6px;
+			font-family: Consolas, monospace;
+			font-size: 0.95rem;
+			color: #c7254e;
+			border: 1px solid #d6d8db;
+			display: inline-block;
+		}
 
-    .info {
-      text-align: center;
-      font-size: 0.95rem;
-      color: #555;
-    }
+		footer {
+			text-align: center;
+			padding: 2rem 1rem;
+			background-color: #ffffff;
+			border-top: 1px solid #ccc;
+			color: #555;
+			font-size: 0.95rem;
+		}
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.5rem;
-      }
+		footer a {
+			color: #1e90ff;
+			text-decoration: none;
+		}
 
-      main {
-        margin: 1rem;
-        padding: 1rem;
-      }
-    }
-  </style>
+		footer a:hover {
+			text-decoration: underline;
+		}
+
+		@media (max-width: 600px) {
+			header h1 {
+				font-size: 1.5rem;
+			}
+
+			main {
+				margin: 1rem;
+				padding: 1rem;
+			}
+		}
+	</style>
 </head>
+
 <body>
-  <header>
-    <h1>Seja bem-vindo à API com Express + Prisma</h1>
-  </header>
+	<header>
+		<h1>Seja bem-vindo à API com Express + Prisma</h1>
+	</header>
 
-  <main>
-    <section>
-      <h2>📁 Endpoints de Usuários</h2>
-      <ul>
-        <li><strong>GET</strong> <code>/users</code> – Listar todos os usuários</li>
-        <li><strong>GET</strong> <code>/users/:id</code> – Obter um usuário específico</li>
-        <li><strong>POST</strong> <code>/users</code> – Criar novo usuário</li>
-        <li><strong>PUT</strong> <code>/users/:id</code> – Atualizar usuário existente</li>
-        <li><strong>DELETE</strong> <code>/users/:id</code> – Deletar um usuário</li>
-      </ul>
-    </section>
+	<main>
+		Repositório no GitHub: <a href="https://github.com/Adrian-Quindeler/C2-webII"
+			target="_blank">Adrian-Quindeler/C2-webII</a>
 
-    <section>
-      <h2>📝 Endpoints de Posts</h2>
-      <ul>
-        <li><strong>GET</strong> <code>/posts</code> – Listar todos os posts</li>
-        <li><strong>GET</strong> <code>/posts/:id</code> – Obter um post específico</li>
-        <li><strong>POST</strong> <code>/posts</code> – Criar novo post</li>
-      </ul>
-    </section>
-  </main>
+		<section>
+			<h2>📁 Endpoints de Usuários</h2>
+			<ul>
+				<li><strong>GET</strong> <code>/users</code> – Listar todos os usuários</li>
+				<li><strong>GET</strong> <code>/users/:id</code> – Obter um usuário específico</li>
+				<li><strong>POST</strong> <code>/users</code> – Criar novo usuário</li>
+				<li><strong>PUT</strong> <code>/users/:id</code> – Atualizar usuário existente</li>
+				<li><strong>DELETE</strong> <code>/users/:id</code> – Deletar um usuário</li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>📝 Endpoints de Posts</h2>
+			<ul>
+				<li><strong>GET</strong> <code>/posts</code> – Listar todos os posts</li>
+				<li><strong>GET</strong> <code>/posts/:id</code> – Obter um post específico</li>
+				<li><strong>POST</strong> <code>/posts</code> – Criar novo post</li>
+			</ul>
+		</section>
+	</main>
 </body>
 </html>
