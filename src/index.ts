@@ -1,22 +1,21 @@
 import express, { Express, Request, Response } from "express";
 import { PrismaClient } from '../generated/prisma';
+import path from 'path';
 
 const prisma = new PrismaClient();
 const app: Express = express();
 const port = 3000;
 
-app.use(express.json()); 
+app.use(express.json());
+app.use(express.static('public'));  
 
-app.get('/', (req, res) => {
-  res.send('Olá Mundo!');
+app.get('/', (req: Request, res: Response) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.listen(port, () => {
   console.log(`App rodando na porta ${port}`);
 });
-
-
-
 
 // USER:
 
